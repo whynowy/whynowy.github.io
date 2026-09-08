@@ -51,7 +51,7 @@ export default {
     archivesDesc: "",
 
     searchTitle: "Search",
-    searchDesc: "Search any article ...",
+    searchDesc: "",
   },
   a11y: {
     skipToContent: "Skip to content",
