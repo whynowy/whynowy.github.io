@@ -11,6 +11,7 @@ export default defineAstroPaperConfig({
     lang: "en",
     timezone: "America/Los_Angeles",
     dir: "ltr",
+    googleAnalyticsId: "G-RF121RQEMQ",
   },
   posts: {
     perPage: 4,
@@ -23,8 +24,8 @@ export default defineAstroPaperConfig({
     showArchives: true,
     showBackButton: true,
     editPost: {
-      enabled: true,
-      url: "https://github.com/whynowy/whynowy.github.io/edit/main/",
+      enabled: false,
+      // url: "https://github.com/whynowy/whynowy.github.io/edit/main/",
     },
     search: "pagefind",
   },
