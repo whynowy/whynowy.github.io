@@ -35,20 +35,20 @@ export default {
   },
   footer: {
     copyright: "Copyright",
-    allRightsReserved: "All rights reserved.",
+    allRightsReserved: "Derek Wang",
   },
   pages: {
     tagTitle: "Tag",
-    tagDesc: "All the articles with the tag",
+    tagDesc: "",
 
     tagsTitle: "Tags",
-    tagsDesc: "All the tags used in posts.",
+    tagsDesc: "",
 
     postsTitle: "Posts",
-    postsDesc: "All the articles I've posted.",
+    postsDesc: "",
 
     archivesTitle: "Archives",
-    archivesDesc: "All the articles I've archived.",
+    archivesDesc: "",
 
     searchTitle: "Search",
     searchDesc: "Search any article ...",
