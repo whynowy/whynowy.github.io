@@ -35,5 +35,7 @@ export default defineAstroPaperConfig({
     { name: "mail",     url: "mailto:whynowy@gmail.com" },
   ],
   shareLinks: [
+    { name: "linkedin", url: "https://www.linkedin.com/sharing/share-offsite/?url=" },
+    { name: "x",        url: "https://x.com/intent/post?url=" },
   ],
 });
