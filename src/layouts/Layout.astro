@@ -97,13 +97,18 @@ const rssHref = getRelativeLocaleUrl(
     {
       site.googleAnalyticsId && (
         <>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF121RQEMQ"></script>
-          <script>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`}
+          />
+          <script is:inline define:vars={{ gaId: site.googleAnalyticsId }}>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-RF121RQEMQ');
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", gaId);
           </script>
         </>
       )
