@@ -14,8 +14,6 @@ tags:
 description: "A Kubernetes-native control plane for distributed multi-agent systems - declare how your agents cooperate, and let the platform handle discovery, scaling, and rollout."
 ---
 
-## Table of contents
-
 ## The shift underway
 
 AI applications are quietly re-architecting themselves three times at once - and most agent tooling was only built for the version before the shift.
@@ -103,8 +101,8 @@ That's a deliberate bet: the value Kynomesh adds is at the infrastructure layer 
 
 Multi-agent systems are leaving the process and heading for the cluster. The question isn't whether your team builds the discovery, scaling, and rollout layer underneath them - it's whether you build it once, yourselves, per project, or declare it.
 
-- [Read the docs](https://github.com/kynoproj/kynomesh)
-- [View the source on GitHub](https://github.com/kynoproj/kynomesh)
+- [Docs](https://kyno.sh)
+- [GitHub](https://github.com/kynoproj/kynomesh)
 - [Join the Slack community](https://join.slack.com/t/kynoproj/shared_invite/zt-3zfjq4ok5-d7z2ZyeaD0574LCLXI9mnA)
 
 Kynomesh is Apache 2.0 licensed.
