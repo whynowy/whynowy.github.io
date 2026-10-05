@@ -1,0 +1,87 @@
+<svg viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three AgentSet communication patterns: Supervisor, where one entry agent connects to three workers; Handoff, where four agents are all connected to each other; and Sequential, where agents connect in a single chain">
+  <defs>
+    <style>
+      .bg { fill: #11161c; }
+      .panel { fill: #161c23; stroke: #2a323d; stroke-width: 1.4; }
+      .edge { stroke: #2a323d; stroke-width: 2; fill: none; }
+      .edge.live { stroke: #5ab0c9; opacity: 0.9; }
+      .edge.dashed { stroke-dasharray: 5 6; }
+      .node { fill: #5ab0c9; }
+      .node.entry { fill: #5fae72; }
+      .node.ghost { fill: #3a4452; }
+      .title { font-family: "IBM Plex Mono", ui-monospace, monospace; font-weight: 600; font-size: 22px; fill: #e8ecf1; }
+      .caption { font-family: "IBM Plex Sans", -apple-system, sans-serif; font-size: 15px; fill: #96a1ae; }
+      .packet {
+        fill: #5fae72;
+        offset-rotate: 0deg;
+        animation: travel linear infinite;
+      }
+      @keyframes travel {
+        from { offset-distance: 0%; }
+        to { offset-distance: 100%; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .packet { animation: none; offset-distance: 50%; }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="920" height="360" rx="8"/>
+
+  <!-- Supervisor panel -->
+  <g transform="translate(24,24)">
+    <rect class="panel" x="0" y="0" width="272" height="312" rx="8"/>
+    <text class="title" x="24" y="40">Supervisor</text>
+    <path class="edge live" d="M136 95 L70 170"/>
+    <path class="edge live" d="M136 95 L136 170"/>
+    <path class="edge live" d="M136 95 L202 170"/>
+    <circle class="packet" r="4" style="offset-path: path('M136 95 L70 170'); animation-duration: 1.8s;"/>
+    <circle class="packet" r="4" style="offset-path: path('M136 95 L136 170'); animation-duration: 1.5s; animation-delay: -0.3s;"/>
+    <circle class="packet" r="4" style="offset-path: path('M136 95 L202 170'); animation-duration: 2.1s; animation-delay: -0.6s;"/>
+    <circle class="node entry" cx="136" cy="85" r="10"/>
+    <circle class="node" cx="70" cy="180" r="9"/>
+    <circle class="node" cx="136" cy="180" r="9"/>
+    <circle class="node" cx="202" cy="180" r="9"/>
+    <text class="caption" x="24" y="250">One coordinator,</text>
+    <text class="caption" x="24" y="272">many specialists.</text>
+  </g>
+
+  <!-- Handoff panel -->
+  <g transform="translate(324,24)">
+    <rect class="panel" x="0" y="0" width="272" height="312" rx="8"/>
+    <text class="title" x="24" y="40">Handoff</text>
+    <path class="edge live" d="M70 95 L202 95"/>
+    <path class="edge live" d="M70 185 L202 185"/>
+    <path class="edge live" d="M70 95 L70 185"/>
+    <path class="edge live" d="M202 95 L202 185"/>
+    <path class="edge live" d="M70 95 L202 185"/>
+    <path class="edge live" d="M202 95 L70 185"/>
+    <circle class="packet" r="4" style="offset-path: path('M70 95 L202 95'); animation-duration: 1.7s;"/>
+    <circle class="packet" r="4" style="offset-path: path('M70 185 L202 185'); animation-duration: 2s; animation-delay: -0.5s;"/>
+    <circle class="packet" r="4" style="offset-path: path('M70 95 L202 185'); animation-duration: 2.3s; animation-delay: -1s;"/>
+    <circle class="packet" r="4" style="offset-path: path('M202 95 L70 185'); animation-duration: 1.9s; animation-delay: -1.3s;"/>
+    <circle class="node" cx="70" cy="95" r="9"/>
+    <circle class="node" cx="202" cy="95" r="9"/>
+    <circle class="node" cx="70" cy="185" r="9"/>
+    <circle class="node" cx="202" cy="185" r="9"/>
+    <text class="caption" x="24" y="250">A swarm - any agent</text>
+    <text class="caption" x="24" y="272">can hand off to any other.</text>
+  </g>
+
+  <!-- Sequential panel -->
+  <g transform="translate(624,24)">
+    <rect class="panel" x="0" y="0" width="272" height="312" rx="8"/>
+    <text class="title" x="24" y="40">Sequential</text>
+    <path class="edge live" d="M44 150 L112 150"/>
+    <path class="edge live" d="M132 150 L200 150"/>
+    <path class="edge dashed" d="M220 150 L248 150"/>
+    <circle class="packet" r="4" style="offset-path: path('M44 150 L112 150'); animation-duration: 1.4s;"/>
+    <circle class="packet" r="4" style="offset-path: path('M132 150 L200 150'); animation-duration: 1.4s; animation-delay: -0.7s;"/>
+    <circle class="node entry" cx="34" cy="150" r="9"/>
+    <circle class="node" cx="122" cy="150" r="9"/>
+    <circle class="node" cx="210" cy="150" r="9"/>
+    <circle class="node ghost" cx="248" cy="150" r="8"/>
+    <text class="caption" x="24" y="250">A pipeline - each stage</text>
+    <text class="caption" x="24" y="272">feeds the next, in order.</text>
+  </g>
+</svg>

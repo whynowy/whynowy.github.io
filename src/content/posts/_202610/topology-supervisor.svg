@@ -1,0 +1,71 @@
+<svg viewBox="0 0 920 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a Supervisor-pattern AgentSet: a coordinator agent connected to three worker agents - searcher, coder, and summarizer">
+  <defs>
+    <style>
+      .bg { fill: #11161c; }
+      .edge { stroke: #5ab0c9; stroke-width: 2.2; fill: none; opacity: 0.85; }
+      .pod { fill: #161c23; stroke: #2a323d; stroke-width: 1.6; }
+      .pod.entry { stroke: #5fae72; stroke-width: 2.4; }
+      .dot { fill: #5ab0c9; }
+      .dot.entry { fill: #5fae72; }
+      .label { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 20px; fill: #e8ecf1; }
+      .sub { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 15px; fill: #8c98a6; letter-spacing: 0.02em; }
+      .tag { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 14px; fill: #69727e; letter-spacing: 0.08em; }
+      .packet {
+        fill: #5fae72;
+        offset-rotate: 0deg;
+        animation: travel linear infinite;
+      }
+      .packet.p1 { offset-path: path("M 460 120 C 350 190, 260 230, 170 290"); animation-duration: 2.6s; }
+      .packet.p2 { offset-path: path("M 460 120 L 460 290"); animation-duration: 2.1s; animation-delay: -0.35s; }
+      .packet.p3 { offset-path: path("M 460 120 C 570 190, 660 230, 750 290"); animation-duration: 2.9s; animation-delay: -0.8s; }
+      @keyframes travel {
+        from { offset-distance: 0%; }
+        to { offset-distance: 100%; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .packet { animation: none; offset-distance: 50%; }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="920" height="420" rx="8"/>
+  <text class="tag" x="28" y="36">AGENTSET · PATTERN: SUPERVISOR</text>
+
+  <!-- edges -->
+  <path class="edge" d="M 460 120 C 350 190, 260 230, 170 290" />
+  <path class="edge" d="M 460 120 L 460 290" />
+  <path class="edge" d="M 460 120 C 570 190, 660 230, 750 290" />
+
+  <!-- traffic -->
+  <circle class="packet p1" r="5"/>
+  <circle class="packet p2" r="5"/>
+  <circle class="packet p3" r="5"/>
+
+  <!-- entry pod -->
+  <g transform="translate(460,110)">
+    <rect class="pod entry" x="-130" y="-42" width="260" height="84" rx="8"/>
+    <circle class="dot entry" cx="-96" cy="-10" r="7"/>
+    <text class="label" x="-72" y="-2">coordinator</text>
+    <text class="sub" x="-96" y="26">entry agent</text>
+  </g>
+
+  <!-- worker pods -->
+  <g transform="translate(170,330)">
+    <rect class="pod" x="-115" y="-42" width="230" height="84" rx="8"/>
+    <circle class="dot" cx="-83" cy="-10" r="7"/>
+    <text class="label" x="-59" y="-2">searcher</text>
+    <text class="sub" x="-83" y="26">×3 replicas</text>
+  </g>
+  <g transform="translate(460,330)">
+    <rect class="pod" x="-105" y="-42" width="210" height="84" rx="8"/>
+    <circle class="dot" cx="-73" cy="-10" r="7"/>
+    <text class="label" x="-49" y="-2">coder</text>
+    <text class="sub" x="-73" y="26">×2 replicas</text>
+  </g>
+  <g transform="translate(750,330)">
+    <rect class="pod" x="-122" y="-42" width="244" height="84" rx="8"/>
+    <circle class="dot" cx="-90" cy="-10" r="7"/>
+    <text class="label" x="-66" y="-2">summarizer</text>
+    <text class="sub" x="-90" y="26">×1 replica</text>
+  </g>
+</svg>
