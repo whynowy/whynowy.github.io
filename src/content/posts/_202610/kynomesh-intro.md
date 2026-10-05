@@ -20,7 +20,7 @@ AI applications are quietly re-architecting themselves three times at once - and
 
 The first generation of agent frameworks assumed a single model behind a single prompt. Then came multi-agent systems: a planner, a critic, a handful of specialists - each good at one thing, coordinating on a shared problem. Now a third shift is underway, and it's the one infrastructure hasn't caught up to: those agents are leaving the process. A planner and its workers used to share memory inside one Python process. Increasingly, they're separate deployments, written in different languages, scaled independently, talking over the network.
 
-That's not a framework problem anymore. It's a Kubernetes problem - the same one that service meshes solved for microservices a decade ago, except for a workload shape nobody designed Istio or Linkerd around: agents that hold a connection open for forty seconds waiting on an LLM, that need to find each other by role instead of by hostname, and that speak a protocol - [A2A](https://a2a-protocol.org/) - most cluster tooling has never heard of.
+That's not a framework problem anymore. It's a Kubernetes problem - the same one that service meshes solved for microservices a decade ago, except for a workload shape nobody designed Istio or Linkerd around: agents that hold a connection open for forty seconds waiting on an LLM, that need to find each other by role instead of by hostname, and that speak a protocol - [A2A](https://a2a-protocol.org/).
 
 ## Every team re-solves the same problems
 
