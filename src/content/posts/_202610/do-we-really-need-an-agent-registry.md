@@ -3,7 +3,7 @@ author: Derek Wang
 pubDatetime: 2026-10-13T00:00:00-07:00
 title: "Do We Really Need an Agent Registry?"
 slug: do-we-really-need-an-agent-registry
-featured: false
+featured: true
 draft: false
 tags:
   - AIAgent
