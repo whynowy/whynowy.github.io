@@ -156,3 +156,5 @@ _Kynomesh_ does not claim to replace every enterprise registry function. It turn
 - [Kynomesh - GitHub Repository](https://github.com/kynoproj/kynomesh)
 - [Kynomesh - Documentation](https://kyno.sh)
 - [Kynomesh - Examples](https://github.com/kynoproj/kynomesh-examples)
+
+[This post is also published at [https://blog.kyno.sh/do-we-really-need-an-agent-registry-20bb251ee7ba](https://blog.kyno.sh/do-we-really-need-an-agent-registry-20bb251ee7ba)]
