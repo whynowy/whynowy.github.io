@@ -21,7 +21,7 @@ To address these challenges, the industry is investing heavily in dedicated agen
 
 ![A registry at the top connected by dashed lines to five agents, A through E](./agent-registry-registry.png)
 
-**Registry** - Everything registered is findable by every client that queries it. Visibility is then narrowed with filters and entitlements.
+<p class="caption"><strong>Registry</strong> - Everything registered is findable by every client that queries it. Visibility is then narrowed with filters and entitlements.</p>
 
 These efforts address real problems. But they also invite a more fundamental architectural question:
 
@@ -33,7 +33,7 @@ With [_Kynomesh_](https://github.com/kynoproj/kynomesh), a Kubernetes-native dec
 
 ![A coordinator agent with arrows to three workers - searcher, writer, and an external fraud-check agent - labeled "workers see no peers"](./agent-registry-declared-topology.png)
 
-**Declared topology** - Under the Supervisor pattern the entry agent is given its workers. Nobody else is given anyone.
+<p class="caption"><strong>Declared topology</strong> - Under the Supervisor pattern the entry agent is given its workers. Nobody else is given anyone.</p>
 
 ## The Problem with Dedicated Agent Registries
 
